@@ -12,6 +12,12 @@ var mongoose = require('mongoose');
 
 var debug = require('debug')('blog:database');
 
+var app = express();
+
+var usersRouter = require('./routes/users');
+app.use('/users', usersRouter);
+
+
 // Conect to database
 
 mongoose.connect(process.env.MONGO_URI, {
@@ -27,7 +33,7 @@ mongoose.connect(process.env.MONGO_URI, {
     process.exit(1);
   });
 
-var app = express();
+
 
 
 // view engine setup
