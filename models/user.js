@@ -2,7 +2,7 @@ const mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var UserSchema = Schema({
-    raza: {
+    raza:{
         type: String,
         required: true
         

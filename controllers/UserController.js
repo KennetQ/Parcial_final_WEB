@@ -1,6 +1,6 @@
-/*exports.name = () => { return "dato" }
+/***exports.name = () => { return "dato" }
 
-module.exports = { propiedad: function() {} }*/
+module.exports = { propiedad: function() {} }****/
 
 var User = require('../models/user');
 var debug = require('debug')('blog:user_controller');
@@ -112,7 +112,7 @@ module.exports.delete = (req, res, next) => {
     });
 
     User.findOneAndDelete({nombre: req.params.nombre})
-    .then((data) =>{
+    .then((data) => {
         if (data) res.status(200).json(data);
         else res.status(404).send();
     }).catch( err => {

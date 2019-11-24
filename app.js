@@ -17,7 +17,6 @@ var app = express();
 var usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
 
-
 // Conect to database
 
 mongoose.connect(process.env.MONGO_URI, {
